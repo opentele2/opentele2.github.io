@@ -5,6 +5,9 @@
   --ot-radius-xl: 1.75rem;
   --ot-shadow-s: 0 10px 30px var(--ot-shadow-color);
   --ot-shadow-m: 0 20px 48px var(--ot-shadow-color);
+  --ot-header-height: 2.4rem;
+  --ot-tabs-height: 2.4rem;
+  --ot-sticky-offset: calc(var(--ot-header-height) + var(--ot-tabs-height));
 }
 
 [data-md-color-scheme="default"] {
@@ -541,6 +544,24 @@ button {
 @media screen and (min-width: 60em) {
   .home-hero {
     grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+  }
+
+  .md-tabs {
+    position: sticky;
+    top: var(--ot-header-height);
+    z-index: 3;
+  }
+
+  .md-sidebar {
+    top: var(--ot-sticky-offset);
   }
 }
 
