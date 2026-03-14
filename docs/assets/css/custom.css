@@ -545,6 +545,11 @@ button {
   .home-hero {
     grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.95fr);
   }
+
+  .md-nav--secondary .md-nav__title {
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 @media screen and (min-width: 76.25em) {
@@ -562,6 +567,11 @@ button {
 
   .md-sidebar {
     top: var(--ot-sticky-offset);
+  }
+
+  .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
+    background: transparent;
+    box-shadow: none;
   }
 }
 
