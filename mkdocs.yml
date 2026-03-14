@@ -13,6 +13,7 @@ copyright: >
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/img/opentele.png
   favicon: assets/img/opentele.png
   font:
@@ -57,6 +58,9 @@ extra_javascript:
   - https://unpkg.com/mermaid@11.12.2/dist/mermaid.min.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - assets/pymdownx-extras/extra-loader-9e2c67b9.js
+
+extra:
+  generator: false
 
 markdown_extensions:
   - toc:
