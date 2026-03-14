@@ -1,0 +1,438 @@
+/* ============================================================
+   opentele2 — Dark Purple Theme
+   A sleek, modern dark theme with deep purple & violet accents.
+   ============================================================ */
+
+:root {
+  /* Core palette */
+  --ot-bg-deep:        #0d0a1a;
+  --ot-bg-surface:     #13102a;
+  --ot-bg-card:        #1a1535;
+  --ot-bg-elevated:    #221c42;
+  --ot-border:         #2d2554;
+  --ot-border-subtle:  #1f1940;
+
+  /* Accent colors */
+  --ot-purple:         #a855f7;
+  --ot-purple-bright:  #c084fc;
+  --ot-purple-dim:     #7c3aed;
+  --ot-violet:         #8b5cf6;
+  --ot-fuchsia:        #d946ef;
+  --ot-indigo:         #6366f1;
+
+  /* Text */
+  --ot-text:           #e8e0f0;
+  --ot-text-muted:     #a09bb5;
+  --ot-text-dim:       #6b6580;
+
+  /* Functional */
+  --ot-success:        #34d399;
+  --ot-warning:        #fbbf24;
+  --ot-error:          #f87171;
+  --ot-info:           #60a5fa;
+
+  /* Glow */
+  --ot-glow:           rgba(168, 85, 247, 0.15);
+  --ot-glow-strong:    rgba(168, 85, 247, 0.3);
+}
+
+/* ---- Slate (dark) scheme overrides ---- */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color:           var(--ot-bg-deep);
+  --md-default-fg-color:           var(--ot-text);
+  --md-default-fg-color--light:    var(--ot-text-muted);
+  --md-default-fg-color--lighter:  var(--ot-text-dim);
+  --md-default-fg-color--lightest: var(--ot-text-dim);
+
+  --md-primary-fg-color:           var(--ot-purple-dim);
+  --md-primary-bg-color:           var(--ot-bg-surface);
+  --md-accent-fg-color:            var(--ot-purple-bright);
+
+  --md-typeset-color:              var(--ot-text);
+  --md-typeset-a-color:            var(--ot-purple-bright);
+
+  --md-code-bg-color:              var(--ot-bg-card);
+  --md-code-fg-color:              var(--ot-text);
+  --md-code-hl-color:              var(--ot-glow);
+
+  --md-footer-bg-color:            var(--ot-bg-surface);
+  --md-footer-bg-color--dark:      var(--ot-bg-deep);
+
+  --md-typeset-table-color:        var(--ot-border);
+}
+
+/* ---- Header / Navigation ---- */
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(135deg, var(--ot-bg-deep) 0%, #1a0e33 100%);
+  border-bottom: 1px solid var(--ot-border-subtle);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background: var(--ot-bg-surface);
+  border-bottom: 1px solid var(--ot-border-subtle);
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active,
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  color: var(--ot-purple-bright);
+}
+
+/* Active tab indicator glow */
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  border-bottom: 2px solid var(--ot-purple);
+  text-shadow: 0 0 12px var(--ot-glow-strong);
+}
+
+/* ---- Sidebar ---- */
+
+[data-md-color-scheme="slate"] .md-sidebar {
+  background: var(--ot-bg-deep);
+  border-right: 1px solid var(--ot-border-subtle);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: var(--ot-purple-bright);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: var(--ot-purple-bright);
+  font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link {
+  color: var(--ot-purple);
+}
+
+/* ---- Content area ---- */
+
+[data-md-color-scheme="slate"] .md-content {
+  background: var(--ot-bg-deep);
+}
+
+/* Headings */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--ot-purple-bright);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: var(--ot-violet);
+  border-bottom: 1px solid var(--ot-border-subtle);
+  padding-bottom: 0.3em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--ot-text);
+}
+
+/* Links */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--ot-purple-bright);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--ot-fuchsia);
+  text-shadow: 0 0 8px var(--ot-glow);
+}
+
+/* ---- Code blocks ---- */
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background: var(--ot-bg-card);
+  color: var(--ot-purple-bright);
+  border: 1px solid var(--ot-border-subtle);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+  background: var(--ot-bg-card) !important;
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(168, 85, 247, 0.05);
+  overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+  background: transparent;
+  border: none;
+  padding: 1em;
+  font-size: 0.85em;
+  color: var(--ot-text);
+}
+
+/* Code copy button */
+[data-md-color-scheme="slate"] .md-clipboard {
+  color: var(--ot-text-muted);
+}
+
+[data-md-color-scheme="slate"] .md-clipboard:hover {
+  color: var(--ot-purple-bright);
+}
+
+/* ---- Tables ---- */
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background: var(--ot-bg-elevated);
+  color: var(--ot-purple-bright);
+  font-weight: 600;
+  border-bottom: 2px solid var(--ot-purple-dim);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-color: var(--ot-border-subtle);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover td {
+  background: var(--ot-bg-card);
+}
+
+/* ---- Admonitions ---- */
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background: var(--ot-bg-card);
+  border: 1px solid var(--ot-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition-title,
+[data-md-color-scheme="slate"] .md-typeset summary {
+  background: var(--ot-bg-elevated);
+  border-bottom: 1px solid var(--ot-border-subtle);
+}
+
+/* Note */
+[data-md-color-scheme="slate"] .md-typeset .admonition.note,
+[data-md-color-scheme="slate"] .md-typeset details.note {
+  border-left: 4px solid var(--ot-purple);
+}
+
+/* Warning */
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  border-left: 4px solid var(--ot-warning);
+}
+
+/* Tip */
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset details.tip {
+  border-left: 4px solid var(--ot-success);
+}
+
+/* Danger */
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
+[data-md-color-scheme="slate"] .md-typeset details.danger {
+  border-left: 4px solid var(--ot-error);
+}
+
+/* Info */
+[data-md-color-scheme="slate"] .md-typeset .admonition.info,
+[data-md-color-scheme="slate"] .md-typeset details.info {
+  border-left: 4px solid var(--ot-info);
+}
+
+/* ---- Footer ---- */
+
+[data-md-color-scheme="slate"] .md-footer {
+  background: var(--ot-bg-surface);
+  border-top: 1px solid var(--ot-border-subtle);
+}
+
+[data-md-color-scheme="slate"] .md-footer-meta {
+  background: var(--ot-bg-deep);
+}
+
+/* ---- Search ---- */
+
+[data-md-color-scheme="slate"] .md-search__input {
+  background: var(--ot-bg-card);
+  border: 1px solid var(--ot-border);
+  color: var(--ot-text);
+}
+
+[data-md-color-scheme="slate"] .md-search__input:focus {
+  border-color: var(--ot-purple);
+  box-shadow: 0 0 0 3px var(--ot-glow);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__meta {
+  background: var(--ot-bg-surface);
+}
+
+[data-md-color-scheme="slate"] .md-search-result__item {
+  border-bottom-color: var(--ot-border-subtle);
+}
+
+/* ---- Scrollbar ---- */
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-track {
+  background: var(--ot-bg-deep);
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-thumb {
+  background: var(--ot-border);
+  border-radius: 4px;
+}
+
+[data-md-color-scheme="slate"] ::-webkit-scrollbar-thumb:hover {
+  background: var(--ot-purple-dim);
+}
+
+/* ---- Selection ---- */
+
+[data-md-color-scheme="slate"] ::selection {
+  background: var(--ot-glow-strong);
+  color: #fff;
+}
+
+/* ---- Tabbed content ---- */
+
+[data-md-color-scheme="slate"] .md-typeset .tabbed-labels > label {
+  color: var(--ot-text-muted);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .tabbed-labels > label--active,
+[data-md-color-scheme="slate"] .md-typeset .tabbed-labels > .tabbed-labels__active {
+  color: var(--ot-purple-bright);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .tabbed-set > input:checked + label {
+  color: var(--ot-purple-bright);
+  border-color: var(--ot-purple);
+}
+
+/* ---- Task lists ---- */
+
+[data-md-color-scheme="slate"] .md-typeset .task-list-indicator::before {
+  border-color: var(--ot-purple-dim);
+}
+
+[data-md-color-scheme="slate"] .md-typeset [type="checkbox"]:checked + .task-list-indicator::before {
+  background-color: var(--ot-purple);
+  border-color: var(--ot-purple);
+}
+
+/* ---- Hero / landing page enhancements ---- */
+
+[data-md-color-scheme="slate"] .md-typeset img {
+  border-radius: 8px;
+}
+
+/* Badge styling */
+[data-md-color-scheme="slate"] .md-typeset img[src*="badge"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="shields.io"] {
+  border-radius: 3px;
+}
+
+/* ---- Smooth transitions ---- */
+
+[data-md-color-scheme="slate"] .md-nav__link,
+[data-md-color-scheme="slate"] .md-tabs__link,
+[data-md-color-scheme="slate"] .md-typeset a {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* ---- Top-of-page "glow" accent ---- */
+
+[data-md-color-scheme="slate"] .md-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--ot-purple-dim) 20%,
+    var(--ot-fuchsia) 50%,
+    var(--ot-purple-dim) 80%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+/* ---- Tooltip styling ---- */
+
+[data-md-color-scheme="slate"] .md-tooltip {
+  background: var(--ot-bg-elevated);
+  border: 1px solid var(--ot-border);
+  color: var(--ot-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Mark / highlight ---- */
+
+[data-md-color-scheme="slate"] .md-typeset mark {
+  background-color: var(--ot-glow-strong);
+  color: #fff;
+  border-radius: 2px;
+  padding: 0.1em 0.2em;
+}
+
+/* ---- Footnotes ---- */
+
+[data-md-color-scheme="slate"] .md-typeset .footnote-ref {
+  color: var(--ot-purple-bright);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .footnote-backref {
+  color: var(--ot-purple);
+}
+
+/* ---- Keyboard keys ---- */
+
+[data-md-color-scheme="slate"] .md-typeset kbd {
+  background: var(--ot-bg-elevated);
+  border-color: var(--ot-border);
+  color: var(--ot-text);
+  box-shadow: 0 2px 0 var(--ot-border);
+}
+
+/* ---- Version selector / announcement bar ---- */
+
+[data-md-color-scheme="slate"] .md-banner {
+  background: linear-gradient(135deg, var(--ot-purple-dim) 0%, var(--ot-indigo) 100%);
+  color: #fff;
+}
+
+/* ---- Navigation icons ---- */
+
+[data-md-color-scheme="slate"] .md-nav__icon {
+  color: var(--ot-text-muted);
+}
+
+[data-md-color-scheme="slate"] .md-nav__icon:hover {
+  color: var(--ot-purple-bright);
+}
+
+/* ---- Print-friendly ---- */
+
+@media print {
+  :root {
+    --ot-bg-deep: #fff;
+    --ot-text: #1a1a1a;
+    --ot-purple-bright: #7c3aed;
+  }
+}
