@@ -265,7 +265,7 @@ tdesk.SaveTData("new_tdata")
 async def FromSessionJson(session_path: str, json_path: str = None, flag: Type[LoginFlag] = UseCurrentSession, password: str = None, **kwargs) -> TDesktop
 ```
 
-Create an instance of <a class="codehl codehl_obj" href="#td.tdesktop.TDesktop"><b>TDesktop</b></a> from `.session + .json` files. See [Session JSON Format](../../examples/session-json-format/) for details.<br>
+Create an instance of <a class="codehl codehl_obj" href="#td.tdesktop.TDesktop"><b>TDesktop</b></a> from `.session + .json` files. See [Session JSON Format](../../examples/session-json-format.md) for details.<br>
 
 Internally, this imports via <a class="codehl codehl_obj" href="../../telethon/telegramclient#tl.telethon.TelegramClient"><b>TelegramClient</b></a>.<a class="codehl codehl_function" href="../../telethon/telegramclient#tl.telethon.TelegramClient.FromSessionJson"><b>FromSessionJson</b></a><span class="highlight"><span class="o">(</span></span><span class="highlight"><span class="p">)</span></span> and then converts to <a class="codehl codehl_obj" href="#td.tdesktop.TDesktop"><b>TDesktop</b></a>.
 <h3>Arguments:</h3>
@@ -310,7 +310,7 @@ tdesk.SaveTData("output/tdata")
 async def SaveSessionJson(session_path: str, api: Union[Type[APIData], APIData] = None, fetch_user_info: bool = False) -> Tuple[str, str]
 ```
 
-Save this client's session to `.session + .json` files. See [Session JSON Format](../../examples/session-json-format/) for details.<br>
+Save this client's session to `.session + .json` files. See [Session JSON Format](../../examples/session-json-format.md) for details.<br>
 
 Internally, this converts to <a class="codehl codehl_obj" href="../../telethon/telegramclient#tl.telethon.TelegramClient"><b>TelegramClient</b></a> and then calls <a class="codehl codehl_function" href="../../telethon/telegramclient#tl.telethon.TelegramClient.SaveSessionJson"><b>SaveSessionJson</b></a><span class="highlight"><span class="o">(</span></span><span class="highlight"><span class="p">)</span></span>.
 <h3>Arguments:</h3>

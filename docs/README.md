@@ -1,96 +1,108 @@
-<!-- vim: syntax=Markdown -->
+---
+hide:
+  - navigation
+  - toc
+---
 
-# opentele2
+<div class="home-hero">
+  <section class="home-hero__content">
+    <p class="home-hero__eyebrow">Telegram session tooling for Python</p>
+    <h1 class="home-hero__title">Move between <span><code>tdata</code></span> and <span>Telethon</span> with confidence.</h1>
+    <p class="home-hero__lead">opentele2 gives Telegram developers a calmer way to convert sessions, work with official APIs, and generate realistic fingerprints without fighting the tooling or a noisy interface.</p>
+    <div class="home-hero__actions">
+      <a class="md-button md-button--primary" href="documentation/README.md">Read the documentation</a>
+      <a class="md-button" href="examples/README.md">Explore examples</a>
+    </div>
+    <div class="home-hero__meta">
+      <span class="home-pill">Bidirectional conversion</span>
+      <span class="home-pill">Official API flows</span>
+      <span class="home-pill">Telethon-friendly</span>
+    </div>
+  </section>
 
-<p align="center">
-<img src="https://raw.githubusercontent.com/DedInc/opentele2/main/opentele.png" alt="logo" width="180"/>
-<br><br>
-<a href="https://pypi.org/project/opentele2/"><img alt="pypi version" src="https://img.shields.io/pypi/v/opentele2?logo=pypi&logoColor=%232d93c1"/></a>
-<a href="https://pypi.org/project/opentele2/"><img alt="pypi status" src="https://img.shields.io/pypi/status/opentele2?color=%2331c754&logo=pypi&logoColor=%232d93c1"/></a>
-<a href="https://opentele2.readthedocs.io/"><img alt="documentation" src="https://img.shields.io/readthedocs/opentele2.svg?color=%2331c754&logo=readthedocs"/></a>
-<a href="https://codecov.io/gh/DedInc/opentele2">
-<img src="https://img.shields.io/codecov/c/github/DedInc/opentele2?color=%2331c754&label=codecov&logo=codecov&token=H2IWGEJ5LN"/>
-</a>
-<a href="https://github.com/DedInc/opentele2/actions/workflows/package.yml"><img alt="workflow tests" src="https://img.shields.io/github/workflow/status/DedInc/opentele2/package?logo=github&color=%2331c754"/></a>
-<a href="https://github.com/DedInc/opentele2/issues"><img alt="issues" src="https://img.shields.io/github/issues/DedInc/opentele2?color=%2331c754&logo=github"/></a>
-<a href="https://github.com/DedInc/opentele2/commits/main"><img alt="github last commit" src="https://img.shields.io/github/last-commit/DedInc/opentele2?color=%2331c754&logo=github"/></a>
-<a href="https://github.com/DedInc/opentele2/commits/main"><img alt="github commits" src="https://img.shields.io/github/commit-activity/m/DedInc/opentele2?logo=github"/></a>
-<a href="https://pypi.org/project/opentele2/"><img alt="pypi installs" src="https://img.shields.io/pypi/dm/opentele2?label=installs&logo=docusign&color=%2331c754"/></a>
-<a href="https://en.wikipedia.org/wiki/MIT_License"><img alt="pypi license" src="https://img.shields.io/pypi/l/opentele2?color=%2331c754&logo=gitbook&logoColor=white"/></a>
-<a href="https://github.com/psf/black"><img alt="code format" src="https://img.shields.io/badge/code%20style-black-000000.svg?logo=python&logoColor=%232d93c1"/></a>
-</p>
+  <aside class="home-hero__panel">
+    <img src="assets/img/opentele.png" alt="opentele2 logo" />
+    <p class="home-panel__title">Get productive quickly</p>
+    <div class="home-install">
+      <span class="home-install__label">Install</span>
+      <code>pip install --upgrade opentele2</code>
+    </div>
+    <ul class="home-checklist">
+      <li>Convert Telegram Desktop <code>tdata</code> sessions to Telethon.</li>
+      <li>Use official Telegram APIs to reduce detection risk.</li>
+      <li>Generate realistic device information when consistency matters.</li>
+    </ul>
+  </aside>
+</div>
 
-<br>
+## Why opentele2 feels easier to use
 
-A **Python Telegram API Library** for converting between **tdata** and **telethon** sessions, with built-in **official Telegram APIs**. [**Read the documentation**](https://opentele2.readthedocs.io/en/latest/documentation/telegram-desktop/tdesktop/).
+<p class="home-section-intro">The redesign focuses on comfort and clarity: calmer contrast, stronger hierarchy, cleaner entry points into the docs, and fewer visual distractions competing for attention.</p>
 
-## Features
-- Convert [Telegram Desktop](https://github.com/telegramdesktop/tdesktop) **tdata** sessions to [telethon](https://github.com/LonamiWebs/Telethon) sessions and vice versa.
-- Use **telethon** with [official APIs](#authorization) to avoid bot detection.
-- Randomize [device info](https://opentele2.readthedocs.io/en/latest/documentation/authorization/api/#generate) using real data that recognized by Telegram server.
+<div class="grid cards" markdown>
 
-## Dependencies
+-   **Convert both ways**
+    Move between Telegram Desktop <code>tdata</code> sessions and Telethon sessions without format gymnastics.
 
-- [telethon](https://github.com/LonamiWebs/Telethon) - Widely used Telegram's API library for Python.
-- [tgcrypto](https://github.com/pyrogram/tgcrypto) - AES-256-IGE encryption to works with `tdata`.
+-   **Use official Telegram APIs**
+    Stay close to official client behavior when you need a safer, more realistic integration path.
 
-## Installation
-- Install from [PyPI](https://pypi.org/project/opentele2/):
-```pip title="pip"
-pip install --upgrade opentele2
-```
+-   **Generate credible fingerprints**
+    Create device metadata that feels real to Telegram instead of relying on obviously synthetic values.
 
-## First Run
-Load TDesktop from tdata folder and convert it to telethon, with a custom API:
-```python
-from opentele2.td import TDesktop
-from opentele2.tl import TelegramClient
-from opentele2.api import API, CreateNewSession, UseCurrentSession
-import asyncio
+-   **Learn by example**
+    Jump straight into conversion flows, API usage, and session formats with focused examples.
 
-async def main():
-    
-    # Load TDesktop client from tdata folder
-    tdataFolder = r"C:\Users\<username>\AppData\Roaming\Telegram Desktop\tdata"
-    tdesk = TDesktop(tdataFolder)
+</div>
 
-    # Using official iOS API with randomly generated device info
-    # print(api) to see more
-    api = API.TelegramIOS.Generate()
+## Start in the right place
 
-    # Convert TDesktop session to telethon client
-    # CreateNewSession flag will use the current existing session to
-    # authorize the new client by `Login via QR code`.
-    client = await tdesk.ToTelethon("newSession.session", CreateNewSession, api)
+<div class="grid cards" markdown>
 
-    # Although Telegram Desktop doesn't let you authorize other
-    # sessions via QR Code (or it doesn't have that feature),
-    # it is still available across all platforms (APIs).
+-   **Documentation**
+    Learn the core concepts, classes, and API reference.
 
-    # Connect and print all logged in devices
-    await client.connect()
-    await client.PrintSessions()
+    [Open the documentation hub](documentation/README.md)
 
-asyncio.run(main())
-```
+-   **Examples**
+    Follow working examples for the most common session conversion tasks.
 
-## Authorization
-**opentele2** offers the ability to use **official APIs**, which are used by official apps. You can check that out [here](https://opentele2.readthedocs.io/en/latest/documentation/authorization/api/#class-api).
-<br>
+    [Browse examples](examples/README.md)
 
-According to [Telegram TOS](https://core.telegram.org/api/obtaining_api_id#using-the-api-id): *all accounts that sign up or log in using unofficial Telegram API clients are automatically put under observation to avoid violations of the Terms of Service*.
-<br>
-<br>
-It also uses the **[lang_pack](https://core.telegram.org/method/initConnection)** parameter, of which [telethon can't use](https://github.com/LonamiWebs/Telethon/blob/master/telethon/client/telegrambaseclient.py#L375) because it's for official apps only.
-<br>
-Therefore, **there are no differences** between using opentele2 and official apps, the server can't tell you apart.
+-   **First run**
+    Want the shortest route from install to a working script?
 
-## Examples
-The best way to learn anything is by looking at the examples. Am I right?
+    [Go to quick start](#quick-start)
 
-- Example on [readthedocs](https://opentele2.readthedocs.io/en/latest/examples/)
-- Example on [github](./examples)
+</div>
 
-## Documentation [![documentation](https://readthedocs.org/projects/opentele2/badge/?version=latest&style=flat)](https://opentele2.readthedocs.io/)
-- Read documentation on [readthedocs](https://opentele2.readthedocs.io/en/latest/documentation/telegram-desktop/tdesktop/)
-- Read documentation on [github](https://github.com/DedInc/opentele2/tree/main/docs)
+## Quick start
+
+<div class="grid cards" markdown>
+
+-   **Install**
+    Use PyPI to get the latest release.
+
+    <code>pip install --upgrade opentele2</code>
+
+-   **Try a conversion flow**
+    Start with a ready-made example for converting <code>tdata</code> into a Telethon session.
+
+    [Convert <code>tdata</code> to Telethon](examples/convert-tdata-to-telethon.md)
+
+-   **Understand authorization**
+    Learn how official APIs and authorization flags fit into the workflow.
+
+    [Read the authorization docs](documentation/authorization/README.md)
+
+</div>
+
+<div class="home-cta">
+  <p class="home-cta__eyebrow">Ready to dig deeper?</p>
+  <h2>Use the docs like a product, not like a file dump.</h2>
+  <p>Start with the documentation hub if you want architecture and API reference, or head to examples if you prefer learning by running code first.</p>
+  <div class="home-hero__actions">
+    <a class="md-button md-button--primary" href="documentation/README.md">Open documentation hub</a>
+    <a class="md-button" href="examples/README.md">Open examples</a>
+  </div>
+</div>

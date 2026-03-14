@@ -352,7 +352,7 @@ Official Telegram Web A For Browsers<br>
 <h3>Methods:</h3>
 
 - <a class="codehl codehl_function" href="#api.APIData.Generate"><b>Generate</b></a><span class="highlight"><span class="o">(</span></span><span class="highlight"><span class="p">)</span></span> <span class="highlight"><span class="p">:</span></span> \
-Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/).
+Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/README.md).
 
 
 
@@ -384,7 +384,7 @@ Official Telegram Web K For Browsers<br>
 <h3>Methods:</h3>
 
 - <a class="codehl codehl_function" href="#api.APIData.Generate"><b>Generate</b></a><span class="highlight"><span class="o">(</span></span><span class="highlight"><span class="p">)</span></span> <span class="highlight"><span class="p">:</span></span> \
-Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/).
+Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/README.md).
 
 
 
@@ -416,4 +416,4 @@ Old Telegram For Browsers<br>
 <h3>Methods:</h3>
 
 - <a class="codehl codehl_function" href="#api.APIData.Generate"><b>Generate</b></a><span class="highlight"><span class="o">(</span></span><span class="highlight"><span class="p">)</span></span> <span class="highlight"><span class="p">:</span></span> \
-Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/).
+Generate random browser User-Agent fingerprint. Requires <span class="highlight"><span class="n">browserforge</span></span>. See [Fingerprints](../fingerprints/README.md).

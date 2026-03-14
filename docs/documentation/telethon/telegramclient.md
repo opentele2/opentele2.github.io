@@ -342,7 +342,7 @@ await client.PrintSessions()
 async def FromSessionJson(session_path: str, json_path: str = None, flag: Type[LoginFlag] = UseCurrentSession, password: str = None, **kwargs) -> TelegramClient
 ```
 
-Create a <a class="codehl codehl_obj" href="#tl.telethon.TelegramClient"><b>TelegramClient</b></a> from `.session + .json` files. See [Session JSON Format](../../examples/session-json-format/) for details.
+Create a <a class="codehl codehl_obj" href="#tl.telethon.TelegramClient"><b>TelegramClient</b></a> from `.session + .json` files. See [Session JSON Format](../../examples/session-json-format.md) for details.
 <h3>Arguments:</h3>
 
 | Name | Type | Default | Description |
@@ -381,7 +381,7 @@ await client.PrintSessions()
 async def SaveSessionJson(session_path: str, api: Union[Type[APIData], APIData] = None, fetch_user_info: bool = False) -> Tuple[str, str]
 ```
 
-Save this client's session to `.session + .json` files. See [Session JSON Format](../../examples/session-json-format/) for details.
+Save this client's session to `.session + .json` files. See [Session JSON Format](../../examples/session-json-format.md) for details.
 <h3>Arguments:</h3>
 
 | Name | Type | Default | Description |

@@ -1,5 +1,5 @@
 site_name: opentele2
-site_description: A Python library created to make life easier for Telegram API Developers.
+site_description: A Python library created to make life easier for Telegram API developers.
 site_author: DedInc
 site_url: https://opentele2.github.io/
 repo_url: https://github.com/DedInc/opentele2
@@ -19,15 +19,25 @@ theme:
     text: Inter
     code: JetBrains Mono
   palette:
-    scheme: slate
-    primary: deep purple
-    accent: purple
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
+    - navigation.sections
     - navigation.instant
     - navigation.tracking
-    - navigation.expand
     - navigation.indexes
     - navigation.top
     - navigation.footer
@@ -40,8 +50,8 @@ theme:
     repo: fontawesome/brands/github
 
 extra_css:
-  - assets/css/custom.css
   - assets/pymdownx-extras/extra-c12baed3e0.css
+  - assets/css/custom.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@11.12.2/dist/mermaid.min.js
